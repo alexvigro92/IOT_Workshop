@@ -1,0 +1,11 @@
+applications:
+- path: .
+  memory: 128M
+  instances: 1
+  domain: mybluemix.net
+  name: iot-rpi3-project
+  host: iot-rpi3-project
+  disk_quota: 1024M
+  services:
+  - IOT-RPi3-Poject
+  buildpack: python_buildpack

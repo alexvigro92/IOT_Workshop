@@ -1,0 +1,97 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="static/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<title>IOT-Project</title>
+</head>
+
+<body ng-app="iotProyect" ng-controller="chartController">
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+      </button>
+				<a class="navbar-brand" href="#">IOT-RPi3-Project</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<h1 style="text-align: center;">Temperature</h1>
+				<!-- <div class="centered" ng-controller="chartController"> -->
+				<div class="tg-thermometer" style="height: 200px; left: 227px;">
+					<div class="draw-a"></div>
+					<div class="draw-b"></div>
+					<div class="meter">
+						<div class="statistics">
+							<div class="percent percent-a">40</div>
+							<div class="percent percent-b">30</div>
+							<div class="percent percent-c">20</div>
+							<div class="percent percent-d">10</div>
+							<div class="percent percent-e">0</div>
+						</div>
+						<div class="mercury" style="height: {{tempValue + (tempValue*1.5)}}%">
+							<div class="percent-current">{{tempValue}}</div>
+							<div class="mask">
+								<div class="bg-color"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- </div> -->
+			</div>
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<h1 style="text-align: center;">Humidity</h1>
+				<!-- <div class="centered" ng-controller="chartController"> -->
+				<div class="tg-thermometer" style="height: 200px; left: 227px;">
+					<div class="draw-a"></div>
+					<div class="draw-b"></div>
+					<div class="meter">
+						<div class="statistics">
+							<div class="percent percent-a">100</div>
+							<div class="percent percent-b">75</div>
+							<div class="percent percent-c">50</div>
+							<div class="percent percent-d">25</div>
+							<div class="percent percent-e">0</div>
+						</div>
+						<div class="mercury" style="height: {{humValue}}%">
+							<div class="percent-current">{{humValue}}</div>
+							<div class="mask">
+								<div class="bg-color"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- </div> -->
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row" style="padding-top: 30px; padding-bottom: 50px;">
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<canvas id="myChartTemp" width="400" height="250"></canvas>
+			</div>
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<canvas id="myChartHum" width="400" height="250"></canvas>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="static/bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="static/bower_components/chart.js/dist/Chart.min.js"></script>
+	<script type="text/javascript" src="static/bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+	<script type="text/javascript" src="static/js/app.js"></script>
+	<script type="text/javascript" src="static/js/chartController.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+</body>
+
+</html>
